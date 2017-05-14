@@ -20,13 +20,14 @@ module.exports = function AFKer(dispatch) {
 		if(event.target.toUpperCase() === "!afker".toUpperCase()) {
 			if (/^<FONT>on?<\/FONT>$/i.test(event.message)) {
 				enabled = true
-				message('AFKer <font color="#00EE00">enabled</font>.')
+				message('AFKer <font color="#56B4E9">enabled</font>.')
 			}
 			else if (/^<FONT>off?<\/FONT>$/i.test(event.message)) {
 				enabled = false
-				message('AFKer <font color="#DC143C">disabled</font>.')
+				message('AFKer <font color="#E69F00">disabled</font>.')
 			}
-			else message('Commands: "on" (enable AFKer),'
+			else message('Commands:<br>'
+								+ ' "on" (enable AFKer),<br>'
 								+ ' "off" (disable AFKer)'
 						)
 			return false
@@ -44,4 +45,20 @@ module.exports = function AFKer(dispatch) {
 			message: msg
 		})
 	}
+	
+	dispatch.hook('C_CHAT', 1, event => {
+		if(/^<FONT>!afk<\/FONT>$/i.test(event.message)) {
+			if(!enabled) {
+				enabled = true
+				message('AFKer <font color="#56B4E9">enabled</font>.')
+				console.log('AFKer enabled.')
+			}
+			else {
+				enabled = false
+				message('AFKer <font color="#E69F00">disabled</font>.')
+				console.log('AFKer disabled.')
+			}
+			return false
+		}
+	})
 }
