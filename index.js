@@ -1,15 +1,25 @@
+const Command = require('command')
+
 module.exports = function AFKer(dispatch) {
-	let enabled = false,
+	let enabled = true,
+		afk = false,
 		cid = null,
-		player = ''
+		player = '',
+		afkCheck = null
 		
 	dispatch.hook('S_LOGIN', 1, event => {
 		({cid} = event)
 		player = event.name
 	})
+	
+	dispatch.hook('C_PLAYER_LOCATION', 1, () => {
+		clearTimeout(afkCheck)
+		afk = false
+		afkCheck = setTimeout(() => {afk = true}, 3600000) // 1 hour
+	})
 
 	dispatch.hook('C_RETURN_TO_LOBBY', 1, () => {
-		if (enabled) return false // Prevents you from being automatically logged out while AFK
+		if (enabled && afk) return false // Prevents you from being automatically logged out while AFK
 	})
   
 	// ################# //
@@ -59,6 +69,20 @@ module.exports = function AFKer(dispatch) {
 				console.log('AFKer disabled.')
 			}
 			return false
+		}
+	})
+	
+	const command = Command(dispatch)
+	command.add('afk', function() {
+		if(!enabled) {
+			enabled = true
+			message('AFKer <font color="#56B4E9">enabled</font>.')
+			console.log('AFKer enabled.')
+		}
+		else {
+			enabled = false
+			message('AFKer <font color="#E69F00">disabled</font>.')
+			console.log('AFKer disabled.')
 		}
 	})
 }
