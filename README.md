@@ -1,7 +1,3 @@
-##### :heavy_exclamation_mark: Elin Gunner Patch Info :heavy_exclamation_mark:
-This module should be working with the latest https://github.com/meishuu/tera-data.  
-Please always keep your tera-data up-to-date.   
-
 # AFKer
 A tera-proxy module that prevents you from getting back to the character select screen. 
 This has the side effect that the server's AFK check will not kick you out of the game.  
