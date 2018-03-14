@@ -1,3 +1,10 @@
+##### :heavy_exclamation_mark: Status :heavy_exclamation_mark:
+Working on NA Counterpunch patch with the latest https://github.com/meishuu/tera-data.  
+Please always keep your tera-data up-to-date.  
+Other regions will work if the opcodes are mapped but I personally only test modules on NA.  
+
+If you enjoy my work and wish to support future development, feel free to drop me a small donation: [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ&lc=US&item_name=TeraProxy&curency_code=USD&no_note=1&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
+  
 # AFKer
 A tera-proxy module that prevents you from getting back to the character select screen. 
 This has the side effect that the server's AFK check will not kick you out of the game.  
