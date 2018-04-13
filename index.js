@@ -1,3 +1,5 @@
+// Version 1.2.2
+
 const Command = require('command')
 
 module.exports = function AFKer(dispatch) {
@@ -5,13 +7,13 @@ module.exports = function AFKer(dispatch) {
 		afk = false,
 		afkCheck = null
 	
-	dispatch.hook('C_PLAYER_LOCATION', 1, () => {
+	dispatch.hook('C_PLAYER_LOCATION', 'raw', () => {
 		clearTimeout(afkCheck)
 		afk = false
 		afkCheck = setTimeout(() => {afk = true}, 3600000) // 1 hour
 	})
 
-	dispatch.hook('C_RETURN_TO_LOBBY', 1, () => {
+	dispatch.hook('C_RETURN_TO_LOBBY', 'raw', () => {
 		if (enabled && afk) return false // Prevents you from being automatically logged out while AFK
 	})
   
