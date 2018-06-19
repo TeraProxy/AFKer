@@ -1,26 +1,24 @@
-// Version 1.2.2
+// Version 1.2.3
 
 const Command = require('command')
 
 module.exports = function AFKer(dispatch) {
 	let enabled = true,
-		afk = false,
-		afkCheck = null
-	
-	dispatch.hook('C_PLAYER_LOCATION', 'raw', () => {
-		clearTimeout(afkCheck)
-		afk = false
-		afkCheck = setTimeout(() => {afk = true}, 3600000) // 1 hour
+		lasttimemoved = Date.now()
+
+	dispatch.hook('C_PLAYER_LOCATION', 5, event => {
+		if([0,1,5,6].indexOf(event.type) > -1) // running / walking / jumping / jumping (steep terrain)
+			lasttimemoved = Date.now()
 	})
 
 	dispatch.hook('C_RETURN_TO_LOBBY', 'raw', () => {
-		if (enabled && afk) return false // Prevents you from being automatically logged out while AFK
+		if (enabled && Date.now() - lasttimemoved >= 3600000) return false // Prevents you from being logged out after not moving for 1 hour
 	})
-  
+
 	// ################# //
 	// ### Chat Hook ### //
 	// ################# //
-	
+
 	const command = Command(dispatch)
 	command.add('afk', () => {
 		enabled = !enabled
