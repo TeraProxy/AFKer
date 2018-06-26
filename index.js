@@ -2,7 +2,7 @@
 
 const Command = require('command')
 
-module.exports = function AFKer(dispatch) {
+module.exports = function afker(dispatch) {
 	let enabled = true,
 		lasttimemoved = Date.now()
 

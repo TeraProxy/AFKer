@@ -9,7 +9,7 @@ Should work on all regions as long as the opcodes are mapped but I personally on
 ##### :heavy_exclamation_mark: Installation for PinkiePie's tera-proxy :heavy_exclamation_mark:
 1) Update your tera-data: https://github.com/meishuu/tera-data
 2) Download AFKer: https://github.com/TeraProxy/AFKer/archive/master.zip
-3) Extract the contents of both zip files into "\tera-proxy\bin\node_modules\"
+3) Extract the contents of the zip file into "\tera-proxy\bin\node_modules\"
 4) Done!
 5) Check back here once in a while for updates
   
@@ -33,6 +33,9 @@ The following commands are supported:
 Whatever you send to the proxy chat in game is intercepted client-side. The chat is NOT sent to the server.  
 
 ## Changelog
+<details>
+### 1.2.4
+* [*] Fixed a weird case-sensitivity issue
 ### 1.2.3
 * [+] You won't be logged out anymore when other players or NPCs move you (thanks to Owyn)
 * [+] Now supports auto-updating via Caali's tera-proxy
@@ -49,3 +52,4 @@ Whatever you send to the proxy chat in game is intercepted client-side. The chat
 * [+] Added !afk command to toggle between "on" and "off" in non-whisper chats
 ### 1.0.0
 * [~] Initial Release
+</details>
