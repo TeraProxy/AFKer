@@ -34,6 +34,7 @@ Whatever you send to the proxy chat in game is intercepted client-side. The chat
 
 ## Changelog
 <details>
+
 ### 1.2.4
 * [*] Fixed a weird case-sensitivity issue
 ### 1.2.3
@@ -52,4 +53,5 @@ Whatever you send to the proxy chat in game is intercepted client-side. The chat
 * [+] Added !afk command to toggle between "on" and "off" in non-whisper chats
 ### 1.0.0
 * [~] Initial Release
+
 </details>
