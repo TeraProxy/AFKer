@@ -1,7 +1,7 @@
 ##### :heavy_exclamation_mark: Status :heavy_exclamation_mark:
 Should work on all regions as long as the opcodes are mapped. Works on Caali's and Pinkie Pie's tera-proxy.
 
-##### :heavy_exclamation_mark: Installation for Caali's tera-proxy :heavy_exclamation_mark:
+##### :heavy_exclamation_mark: Installation :heavy_exclamation_mark:
 1) Download AFKer: https://github.com/TeraProxy/AFKer/archive/master.zip
 2) Extract the contents of the zip file into "\tera-proxy\bin\node_modules\"
 3) Done! (the module will auto-update on Caali's proxy when a new version is released)
