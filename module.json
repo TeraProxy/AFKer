@@ -1,7 +1,7 @@
 {
     "disableAutoUpdate": false,
     "options": {
-        "niceName": "AFKer"
+        "niceName": "AFK"
     },
     "servers": ["https://raw.githubusercontent.com/TeraProxy/AFKer/master/"],
     "supportUrl": "https://github.com/TeraProxy/AFKer/issues"

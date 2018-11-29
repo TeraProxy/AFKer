@@ -1,9 +1,10 @@
-// Version 1.2.5
+// Version 1.2.6
 
 module.exports = function afker(mod) {
 
 	let enabled = true,
-		lasttimemoved = Date.now()
+		lasttimemoved = Date.now(),
+		niceName = mod.proxyAuthor !== 'caali' ? '[AFK] ' : ''
 
 	mod.hook('C_PLAYER_LOCATION', 5, event => {
 		if([0,1,5,6].indexOf(event.type) > -1) // running / walking / jumping / jumping (steep terrain)
@@ -20,7 +21,7 @@ module.exports = function afker(mod) {
 
 	mod.command.add('afk', () => {
 		enabled = !enabled
-		mod.command.message((enabled ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'))
-		console.log('[AFKer] ' + (enabled ? 'enabled' : 'disabled'))
+		mod.command.message(niceName + 'AFKer ' + (enabled ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'))
+		console.log('AFKer ' + (enabled ? 'enabled' : 'disabled'))
 	})
 }
