@@ -1,5 +1,10 @@
 {
     "disableAutoUpdate": false,
+    "name": "AFKer",
+    "author": "TeraProxy",
+    "description": "A tera-proxy module that prevents you from getting back to the character select screen.\nOnce activated, the server's AFK check will not kick you out of the game.",
+    "version": "1.2.6",
+    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ",
     "options": {
         "niceName": "AFK"
     },
