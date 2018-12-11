@@ -3,7 +3,7 @@ Should work on all regions as long as the opcodes are mapped. Works on Caali's a
 
 ##### :heavy_exclamation_mark: Installation :heavy_exclamation_mark:
 1) Download AFKer: https://github.com/TeraProxy/AFKer/archive/master.zip
-2) Extract the contents of the zip file into "\tera-proxy\bin\node_modules\"
+2) Extract the contents of the zip file into "\tera-proxy\mods\"
 3) Done! (the module will auto-update on Caali's proxy when a new version is released)
   
 If you enjoy my work and wish to support future development, feel free to drop me a small donation: [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ)
@@ -20,7 +20,7 @@ While in game, open a proxy chat session by typing "/proxy" or "/8" in chat and 
 This serves as the script's command interface.  
 The following commands are supported:  
   
-* afk - enable/disable AFKer
+* **afk** - enable/disable AFKer
 
 ## Safety
 Whatever you send to the proxy chat in game is intercepted client-side. The chat is NOT sent to the server.  
