@@ -6,7 +6,8 @@
     "version": "1.2.6",
     "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ",
     "options": {
-        "niceName": "AFK"
+        "niceName": "AFK",
+        "guiName": "AFKer"
     },
     "servers": ["https://raw.githubusercontent.com/TeraProxy/AFKer/master/"],
     "supportUrl": "https://github.com/TeraProxy/AFKer/issues"
